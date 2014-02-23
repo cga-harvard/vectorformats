@@ -6,10 +6,10 @@ try:
     from cjson import decode as json_loads
 except:
     try:
-        from simplejson import dumps as json_dumps
-        from simplejson import loads as json_loads
+        from json import dumps as json_dumps
+        from json import loads as json_loads
     except Exception, E:
-        raise Exception("simplejson is required for using the GeoJSON service. (Import failed: %s)" % E)
+        raise Exception("json is required for using the GeoJSON service. (Import failed: %s)" % E)
 
 class GeoJSON(Format):
     """
